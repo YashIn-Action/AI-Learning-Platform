@@ -8,6 +8,7 @@ font-family: roboto,arial;
   height: 60px;
 }
 .navbar{
+  background-color: white;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -179,4 +180,62 @@ font-family: roboto,arial;
 .accountbutton:hover {
   transform: translateY(-3px);
   box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+}
+@media (max-width: 768px) {
+
+  .herosection {
+    padding: 20px 16px;
+  }
+
+  .heading {
+    font-size: 2.2rem;      
+    line-height: 1.2;
+  }
+
+  .text {
+    width: 100%;            
+    padding: 0;
+  }
+
+  .subheading {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .navbar {
+    height: 64px;
+  }
+
+  .left {
+    margin-left: 16px;
+  }
+
+  .right {
+    width: auto;
+    margin-right: 16px;
+    gap: 12px;
+  }
+
+  .login {
+    display: none;   
+  }
+
+  .signup {
+    height: 36px;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .getstarted {
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+
 }
