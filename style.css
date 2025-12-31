@@ -256,3 +256,14 @@ font-family: roboto,arial;
   }
 
 }
+@media (max-width: 768px) {
+
+  .start {
+    width: 100%;
+    max-width: 340px;      
+    margin: 60px auto;     
+    padding: 40px 24px;
+    text-align: center;
+  }
+
+}
