@@ -278,4 +278,18 @@ font-family: roboto,arial;
     margin: 60px auto;
   }
 }
-
+@media (max-width: 780px){
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 38px 0;
+    gap: 24x;
+  }
+  .box{
+    width: calc(100% - 38px);
+    max-width: 360px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
