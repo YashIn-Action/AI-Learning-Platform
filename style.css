@@ -181,6 +181,33 @@ font-family: roboto,arial;
   transform: translateY(-3px);
   box-shadow: 0 30px 60px rgba(0,0,0,0.3);
 }
+.footer{
+  background-color: white;
+  margin-top: 120px;
+}
+.footer-container{
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 60px 40px;
+}
+.footer-links h4{
+  margin-bottom: 14px;
+  font-size: 1rem;
+}
+.footer-links a{
+  display: block;
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+  background: #020617;
+  color: #94A3B8;
+}
 @media (max-width: 768px) {
 
   .herosection {
