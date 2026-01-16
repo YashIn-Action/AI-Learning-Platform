@@ -306,12 +306,12 @@ font-family: roboto,arial;
   }
 }
 @media (max-width: 780px){
-  .feature {
+  .features {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 38px 0;
-    gap: 24x;
+    gap: 24px;
   }
   .box{
     width: calc(100% - 38px);
