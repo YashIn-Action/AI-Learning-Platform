@@ -119,15 +119,18 @@ function Landing() {
         <div className="footer-container">
           <div className="footer-links">
             <h4>Company</h4>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="#">Careers</a>
+            <a href="/">About</a>
+            <a href="/">Contact</a>
+            <a href="/">Careers</a>
+            <a href="/">Privacy Policy</a>
+            <a href="/">Terms of Service</a>
+
           </div>
 
           <div className="footer-links">
             <h4>Legal</h4>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <a href="/">Privacy Policy</a>
+            <a href="/">Terms of Service</a>
           </div>
         </div>
 
