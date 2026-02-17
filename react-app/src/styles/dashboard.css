@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #f4f6fb;
+}
+
+/* Layout */
+.layout {
+  position: relative;
+}
+
+/* NAVBAR */
+.navbar {
+  height: 65px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo-text {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hamburger {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  background: #6366f1;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  left: -260px;
+  top: 0;
+  height: 100vh;
+  width: 240px;
+  background: white;
+  box-shadow: 8px 0 40px rgba(0,0,0,0.08);
+  padding: 80px 20px 20px;
+  transition: 0.3s ease;
+  z-index: 200;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sidebar li:hover {
+  background: #f1f5ff;
+}
+
+/* BACKDROP */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+  z-index: 150;
+}
+
+/* MAIN */
+.main {
+  padding: 50px 60px;
+}
+
+/* HERO */
+.hero {
+  background: white;
+  border-radius: 18px;
+  padding: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  border-left: 6px solid #6366f1;
+}
+
+.hero h1 {
+  margin: 0;
+}
+
+.hero p {
+  margin-top: 8px;
+  color: #6b7280;
+}
+
+.primary-btn {
+  padding: 12px 26px;
+  background: #6366f1;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.primary-btn:hover {
+  background: #4f46e5;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #6b7280;
+  margin: 0;
+}

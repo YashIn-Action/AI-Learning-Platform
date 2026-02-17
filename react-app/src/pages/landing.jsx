@@ -1,40 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Header from "../components/Header";
 import "../styles/landing.css";
+import Footer from "../components/Footer";
+
 
 function Landing() {
   const navigate = useNavigate();
 
   return (
     <>
-      <header>
-        <div className="navbar">
-          <div className="left">
-            <img
-              className="logo"
-              src="/logo/Gemini_Generated_Image_g1j2w0g1j2w0g1j2-Photoroom.svg"
-              alt="logo"
-            />
-            <p className="title">LEARNEX</p>
-          </div>
-
-          <div className="right">
-            <button
-              className="login"
-              onClick={() => navigate("/login")}
-            >
-              Login
-            </button>
-
-            <button
-              className="signup"
-              onClick={() => navigate("/signup")}
-            >
-              Get Started
-            </button>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <div className="herosection">
         <div className="text">
@@ -115,29 +91,8 @@ function Landing() {
         </div>
       </div>
 
-      <footer className="footer">
-        <div className="footer-container">
-          <div className="footer-links">
-            <h4>Company</h4>
-            <a href="/">About</a>
-            <a href="/">Contact</a>
-            <a href="/">Careers</a>
-            <a href="/">Privacy Policy</a>
-            <a href="/">Terms of Service</a>
+      <Footer />
 
-          </div>
-
-          <div className="footer-links">
-            <h4>Legal</h4>
-            <a href="/">Privacy Policy</a>
-            <a href="/">Terms of Service</a>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          © 2026 Learnex. All rights reserved.
-        </div>
-      </footer>
     </>
   );
 }

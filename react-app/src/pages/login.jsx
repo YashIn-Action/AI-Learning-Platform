@@ -1,42 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
-import "../styles/login.css";
+import "../styles/auth.css";
 
 function Login() {
+  const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
+
+ const handleLogin = (e) => {
+  e.preventDefault();
+  localStorage.setItem("isLoggedIn", "true");
+
+  navigate("/dashboard");
+};
+
+  const handleGoogleLogin = () => {
+    setMessage("Google login clicked (demo)");
+  };
+
+  const handleFacebookLogin = () => {
+    setMessage("Facebook login clicked (demo)");
+  };
+
   return (
-    <div className="login-container">
-      <div className="login-card">
-        <h2 className="login-title">Welcome Back</h2>
+    <>
+      <Header />
 
-        <input
-          type="email"
-          placeholder="Email"
-          className="login-input"
-        />
+      <div className="auth-container">
+        <form className="auth-card" onSubmit={handleLogin}>
+          <h2>Welcome Back</h2>
 
-        <input
-          type="password"
-          placeholder="Password"
-          className="login-input"
-        />
+          {message && (
+            <div className="auth-success">{message}</div>
+          )}
 
-        <button className="login-button">
-          Login
-        </button>
+          <input type="email" placeholder="Email Address" required />
+          <input type="password" placeholder="Password" required />
 
-        <p className="login-text">
-          Don’t have an account?{" "}
-          <span
-            className="login-link"
-            onClick={() => navigate("/signup")}
+          <button type="submit">Login</button>
+
+          <div className="divider">
+            <span>OR</span>
+          </div>
+
+          <button
+            type="button"
+            className="google-btn"
+            onClick={handleGoogleLogin}
           >
-            Sign up
-          </span>
-        </p>
+            Continue with Google
+          </button>
+
+          <button
+            type="button"
+            className="facebook-btn"
+            onClick={handleFacebookLogin}
+          >
+            Continue with Facebook
+          </button>
+        </form>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
 
