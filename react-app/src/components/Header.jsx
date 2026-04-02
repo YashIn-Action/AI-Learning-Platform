@@ -3,6 +3,13 @@ import "../styles/landing.css";
 
 function Header() {
   const navigate = useNavigate();
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("userName");
+    navigate("/login");
+  };
 
   return (
     <header>
@@ -25,19 +32,27 @@ function Header() {
         </div>
 
         <div className="right">
-          <button
-            className="login"
-            onClick={() => navigate("/login")}
-          >
-            Login
-          </button>
+          {isLoggedIn === "true" ? (
+            <>
+              <button className="login" onClick={() => navigate("/dashboard")}>
+                Dashboard
+              </button>
 
-          <button
-            className="signup"
-            onClick={() => navigate("/signup")}
-          >
-            Get Started
-          </button>
+              <button className="signup" onClick={handleLogout}>
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <button className="login" onClick={() => navigate("/login")}>
+                Login
+              </button>
+
+              <button className="signup" onClick={() => navigate("/signup")}>
+                Get Started
+              </button>
+            </>
+          )}
         </div>
       </div>
     </header>

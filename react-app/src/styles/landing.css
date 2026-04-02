@@ -1,53 +1,52 @@
-body{
-background-color: #F2F4FF;
-margin: 0;
-padding: 80px 0 0 0;
-font-family: roboto,arial;
+body {
+  background-color: #F2F4FF;
+  margin: 0;
+  padding: 80px 0 0 0;
+  font-family: 'Inter', roboto, arial, sans-serif;
 }
-.logo{
+.logo {
   height: 60px;
 }
-.navbar{
+.navbar {
   background-color: white;
   display: flex;
   align-items: center;
   flex-direction: row;
-  position: fixed;     
-  top: 0;              
-  left: 0;             
-  width: 100%;         
-  height: 80px;        
-
-  z-index: 1000;  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
 }
-.left{
+.left {
   display: flex;
   flex: 1;
-  margin-left: 40px;
+  margin-left: 10px;
   align-items: center;
   gap: 6px;
 }
-.title{
+.title {
   font-weight: 800;
   letter-spacing: 2px;
   font-size: 19px;
 }
-.right{
+.right {
   width: 300px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 10px;
-  margin-right: 40px;
+  margin-right: 80px;
 }
-.login{
+.login {
   width: 100px;
   background-color: transparent;
   border: none;
   font-size: 16px;
   cursor: pointer;
 }
-.signup{
+.signup {
   background-color: indigo;
   border: none;
   height: 40px;
@@ -58,18 +57,18 @@ font-family: roboto,arial;
   letter-spacing: 1px;
   font-weight: 500;
 }
-.herosection{
+.herosection {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-bottom: 100px;
 }
-.text{
+.text {
   width: 65%;
   padding: 0 20px;
 }
-.heading{
+.heading {
   font-size: clamp(2.8rem, 6vw, 4.5rem);
   font-weight: 600;
   text-align: center;
@@ -77,22 +76,22 @@ font-family: roboto,arial;
   margin-bottom: 24px;
   color: #0F172A;
 }
-.highlight{
+.highlight {
   color: #5B5FEF;
   word-spacing: 3px;
 }
-.subheading{
+.subheading {
   font-size: 1.4rem;
   font-weight: 300;
   text-align: center;
   line-height: 1.7;
   margin-bottom: 40px;
 }
-.button{
+.button {
   display: flex;
   justify-content: center;
 }
-.getstarted{
+.getstarted {
   padding: 16px 40px;
   font-size: 1.05rem;
   font-weight: 600;
@@ -101,16 +100,16 @@ font-family: roboto,arial;
   border-radius: 999px;
   background: linear-gradient(135deg, #5B5FEF, #8B5CF6);
   cursor: pointer;
-  transition: 
+  transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
-.getstarted:hover{
+.getstarted:hover {
   background: linear-gradient(135deg, #4F46E5, #7C3AED);
   transform: translateY(-2px);
 }
 .features {
-  display: grid;              
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 30px;
   max-width: 1400px;
@@ -125,8 +124,8 @@ font-family: roboto,arial;
   margin-top: 10px;
   padding: 30px;
   border-radius: 30px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);;
-  transition: 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
@@ -134,14 +133,13 @@ font-family: roboto,arial;
   box-shadow: 0 16px 40px rgba(108, 77, 246, 0.25);
   transform: translateY(-10px) scale(1.05);
 }
-.start{
-  background-color: purple;
+.start {
   display: flex;
   flex-direction: column;
   justify-content: center;
-   max-width: 1100px;     
-  width: 90%;              
-  margin: 120px auto;       
+  max-width: 1100px;
+  width: 90%;
+  margin: 120px auto;
   padding: 64px 48px;
   background: linear-gradient(135deg, #6c4df6, #7c5cff);
   border-radius: 30px;
@@ -150,7 +148,7 @@ font-family: roboto,arial;
   color: white;
   box-shadow: 0 30px 60px rgba(108, 77, 246, 0.35);
 }
-.start h2{
+.start h2 {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   margin-bottom: 20px;
@@ -162,18 +160,15 @@ font-family: roboto,arial;
   margin: 0 auto 40px;
   opacity: 0.95;
 }
-.accountbutton{
+.accountbutton {
   padding: 16px 46px;
   font-size: 1.05rem;
   font-weight: 600;
-
   color: #6c4df6;
   background: white;
-
   border: none;
   border-radius: 999px;
   cursor: pointer;
-
   box-shadow: 0 20px 40px rgba(0,0,0,0.2);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -181,80 +176,47 @@ font-family: roboto,arial;
   transform: translateY(-3px);
   box-shadow: 0 30px 60px rgba(0,0,0,0.3);
 }
-.footer{
-  background-color: white;
-  margin-top: 120px;
-}
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  padding: 60px 40px;
-}
-.footer-links h4{
-  margin-bottom: 14px;
-  font-size: 1rem;
-}
-.footer-links a{
-  display: block;
-  text-decoration: none;
-  font-size: 0.95rem;
-  margin-bottom: 10px;
-}
-.footer-bottom {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.85rem;
-  background: #020617;
-  color: #94A3B8;
-}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
-
-  .herosection {
-    padding: 20px 16px;
+  body {
+    padding: 64px 0 0 0;
   }
-
-  .heading {
-    font-size: 2.2rem;      
-    line-height: 1.2;
-  }
-
-  .text {
-    width: 100%;            
-    padding: 0;
-  }
-
-  .subheading {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 28px;
-  }
-
-}
-@media (max-width: 768px) {
-
   .navbar {
     height: 64px;
   }
-
   .left {
     margin-left: 16px;
   }
-
   .right {
     width: auto;
     margin-right: 16px;
     gap: 12px;
   }
-
   .login {
-    display: none;   
+    display: none;
   }
-
   .signup {
     height: 36px;
     padding: 0 16px;
     font-size: 14px;
+  }
+  .herosection {
+    padding: 20px 16px;
+    margin-bottom: 40px;
+  }
+  .heading {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+  .text {
+    width: 100%;
+    padding: 0;
+  }
+  .subheading {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 28px;
   }
   .getstarted {
     padding: 14px 32px;
@@ -263,41 +225,20 @@ font-family: roboto,arial;
   .features {
     display: flex;
     flex-direction: column;
-    align-items: center;   
-    padding: 40px 16px;
+    align-items: center;
+    padding: 38px 16px;
     gap: 20px;
   }
-
   .box {
-    width: 100%;
-    max-width: 360px;     
-    text-align: center;    
-  }
-  .start {
-    width: 100%;
-    max-width: 340px;      
-    margin: 60px auto;     
-    padding: 40px 24px;
+    width: calc(100% - 38px);
+    max-width: 360px;
+    margin: 0 auto;
     text-align: center;
-  }
-  body {
-    padding: 80px 0 0 0;  
   }
   .start {
     max-width: 340px;
     margin: 60px auto;
-  }
-  .features {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 38px 0;
-    gap: 24px;
-  }
-  .box{
-    width: calc(100% - 38px);
-    max-width: 360px;
-    margin: 0 auto;
+    padding: 40px 24px;
     text-align: center;
   }
 }

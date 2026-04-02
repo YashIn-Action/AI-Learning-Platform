@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 
 import "../styles/auth.css";
 
@@ -8,6 +9,7 @@ function Signup() {
   const [step, setStep] = useState(1);
   const [message, setMessage] = useState("");
   const [error, setError] = useState(false);
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -57,24 +59,31 @@ function Signup() {
     setStep(3);
   };
 
-  const handleSignup = (e) => {
-    e.preventDefault();
+const handleSignup = (e) => {
+  e.preventDefault();
 
-    if (formData.password !== formData.confirmPassword) {
-      setError(true);
-      setMessage("Passwords do not match.");
-      return;
-    }
+  if (formData.password !== formData.confirmPassword) {
+    setError(true);
+    setMessage("Passwords do not match.");
+    return;
+  }
 
-    if (!formData.agree) {
-      setError(true);
-      setMessage("You must agree to Terms & Conditions.");
-      return;
-    }
+  if (!formData.agree) {
+    setError(true);
+    setMessage("You must agree to Terms & Conditions.");
+    return;
+  }
 
-    setError(false);
-    setMessage("Account created successfully 🎉");
-  };
+  localStorage.setItem("isLoggedIn", "true");
+  localStorage.setItem("userName", formData.name);
+
+  setError(false);
+  setMessage("Account created successfully 🎉");
+
+  setTimeout(() => {
+    navigate("/dashboard");
+  }, 1000);
+};
 
   return (
     <>
